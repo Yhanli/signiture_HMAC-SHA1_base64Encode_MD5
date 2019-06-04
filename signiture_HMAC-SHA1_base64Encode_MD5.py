@@ -1,6 +1,7 @@
 import hashlib
 import base64
 import hmac
+import time
 
 
 def Get_base64encode(encode_item):
@@ -19,7 +20,10 @@ def Get_signatur_inMD5(digester):
 
 if __name__ == '__main__':
     # test sample should get 2a61f17a02b9161080bb417fb1147c60, this test sample used public information provided by ximalaya.com developer document
+    timeStamp = str(int(round(time.time()*1000))) # to calculate time stamp in ms
 
+
+    # test sample #
     app_id = 'b617866c20482d133d5de66fceb37da3'
     app_sec = '4d8e605fa7ed546c4bcb33dee1381179'
     timeStamp ='1533203363618'
